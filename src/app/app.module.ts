@@ -11,6 +11,7 @@ import { NewArrivalComponent } from './pages/home/new-arrival/new-arrival.compon
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
+import { ProductComponent } from './shared/product/product.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.compo
     NewArrivalComponent,
     ProductListComponent,
     ProductDetailComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

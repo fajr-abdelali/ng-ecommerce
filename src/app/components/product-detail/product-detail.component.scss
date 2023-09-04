@@ -5,7 +5,7 @@
         @include flex(flex-start, flex-start);
         height: 75vh;
         .product-gallery {
-            width: 50%;
+            flex: 50%;
             .carousel-inner {
                 height: 75vh;
                 .carousel-item {
@@ -21,7 +21,7 @@
         .product-info {
             @include flex(flex-start, flex-start, column);
             height: 100%;
-            width: 50%;
+            flex: 50%;
         }
     }
 }

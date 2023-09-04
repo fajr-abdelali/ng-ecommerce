@@ -1,0 +1,25 @@
+@import '../../../assets/styles/main.scss';
+
+:host {
+    display: block;
+    height: 100vh;
+
+    .products-sort {
+        @include flex(space-between, center)
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+
+        .products-filter {
+            color: #e5e6ea;
+            background-color: #3e3f43;
+
+            ul {
+                padding: 0px;
+                li.title{}
+            }
+        }
+    }
+}

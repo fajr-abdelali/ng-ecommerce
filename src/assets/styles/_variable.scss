@@ -1,0 +1,20 @@
+//fonts
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype') tech('variations');
+    font-weight: 100 1000;
+    font-stretch: 25% 151%;
+}
+
+$montserrat: 'Montserrat',sans-serif;
+$body-font:$montserrat;
+$text-color--1: #3e3e3e;
+$text-color--2:#9b9b9b;
+
+
+//colors
+
+$gradient--1: #489db7;
+$gradient--2: #2d719e;
+
+$list--btn: $gradient--1, $gradient--2;
