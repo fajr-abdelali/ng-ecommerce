@@ -5,8 +5,15 @@
     font-weight: 100 1000;
     font-stretch: 25% 151%;
 }
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald/Oswald-VariableFont_wght.ttf') format('truetype') tech('variations');
+    font-weight: 100 1000;
+    font-stretch: 25% 151%;
+}
 
 $montserrat: 'Montserrat',sans-serif;
+$oswald:'Oswald',sans-serif;
 $body-font:$montserrat;
 $text-color--1: #3e3e3e;
 $text-color--2:#9b9b9b;

@@ -1,4 +1,59 @@
 @import '../../../assets/styles/main.scss';
+
 nav {
-    
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+    .navbar-brand {
+        color: #fb2056;
+    }
+
+    .navbar-collapse {
+        ul.navbar-nav {
+            li.nav-item {
+                .dropdown {
+                    position: static;
+
+                    .dropdown-menu {
+                        width: 100%;
+                        left: 0;
+
+                        .mega-menu {
+                            display: flex;
+
+                            .list-item {
+                                display: flex;
+                                flex-grow: 1;
+
+                                ul {
+                                    flex-grow: 1;
+                                    padding: 0;
+
+                                    li {
+                                        a {
+                                            padding: .5rem .3rem .1rem 0;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .img-container {
+                                flex: 2;
+                                max-height: 15em;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav-link {
+            color: $text-color--1;
+        }
+    }
 }

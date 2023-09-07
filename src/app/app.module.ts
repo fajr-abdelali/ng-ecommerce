@@ -12,7 +12,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { ProductComponent } from './shared/product/product.component';
-
+import { IconsModule } from './shared/module/icons/icons.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,9 @@ import { ProductComponent } from './shared/product/product.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
+    IconsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

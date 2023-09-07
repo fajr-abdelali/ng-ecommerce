@@ -3,16 +3,50 @@
 @import './assets/styles/reset.scss';
 
 * {
-    color: $text-color--1;
-    font-family: $body-font ;
+  color: $text-color--1;
+  font-family: $body-font ;
+  // background-color: #f6f7f8;
 }
 
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $oswald;
+}
 
 .sub--title {
-    color: $text-color--2;
-    text-transform: capitalize;
+  color: $text-color--2;
+  text-transform: capitalize;
 }
+
+/* Styles for all fa-icon elements */
+fa-icon.ng-fa-icon {
+  svg {
+    path {
+      fill: #c3cad9;
+      stroke: #c3cad9;
+      stroke-width: 5;
+      transition: color 0.3s ease;
+    }
+  }
+}
+
+/* Styles for specific fa-icon elements with the "like" class */
+fa-icon.ng-fa-icon.like {
+  svg {
+    path {
+      fill: #fb2056;
+      stroke: #ffffff;
+      stroke-width: 30;
+    }
+  }
+}
+
+
+
 
 // [type="button"]:not(:disabled),
 // [type="reset"]:not(:disabled),

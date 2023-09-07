@@ -1,25 +1,54 @@
 @import '../../../assets/styles/main.scss';
 
-:host {
-    display: block;
-    height: 100vh;
+.products-sort {
+    @include flex(space-between, center)
+}
 
-    .products-sort {
-        @include flex(space-between, center)
-    }
+.grid {
+    display: flex;
+    align-items: stretch;
 
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr 5fr;
+    aside {
+        flex-grow: 1;
+        max-width: 250px;
+        text-transform: capitalize;
 
-        .products-filter {
-            color: #e5e6ea;
-            background-color: #3e3f43;
+        ul {
+            padding: 0px;
 
-            ul {
-                padding: 0px;
-                li.title{}
+            &::before {
+                content: attr(aria-label);
+                font-size: 120%;
+                font-weight: bold;
+                flex-basis: 100%;
+                color: #4d5e80;
+            }
+
+            li {
+                color: #7f90b3;
+            }
+
+            &.colors {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                li {
+                    flex-basis: calc(20% - 10px);
+                    aspect-ratio: 1 / 1;
+                    border-radius: 50%;
+                    background-color: slategray;
+                    cursor: pointer;
+                }
             }
         }
     }
+
+    .products-list {
+        flex-grow: 3;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
 }

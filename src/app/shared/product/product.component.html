@@ -1,7 +1,8 @@
-<div class="card" style="width: 18rem;">
-    <img src="https://www.volcom.de/cdn/shop/products/A1732307_BLK_2.jpg?v=1686559734" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="product-title">Card title</h5><span class="price"></span>
-        <div class="description">description</div>
+<img src="https://www.volcom.de/cdn/shop/products/A1732307_BLK_2.jpg?v=1686559734" class="product-img" alt="...">
+<div class="product-body">
+    <h5 class="product-title">Card title <span class="price">$200</span></h5>
+    <div class="product-description">description</div>
+    <div class="product-wish">
+        <fa-icon [icon]="['fas', 'heart']" (click)="toggleColor()" [ngClass]="{'like': isClicked}"></fa-icon>
     </div>
 </div>
