@@ -3,8 +3,6 @@
 <div class="product-body">
     <h5 class="product-title">Card title <span class="price">$200</span></h5>
     <div class="product-description">description</div>
-    <div class="product-wish">
-        <fa-icon [icon]="['fas', 'heart']" (click)="toggleColor()" [ngClass]="{'like': isClicked}"></fa-icon>
-    </div>
+    <app-wish-button></app-wish-button>
 </div>
 </a>

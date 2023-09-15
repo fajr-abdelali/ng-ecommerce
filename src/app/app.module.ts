@@ -17,6 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FilterComponent } from './components/product-list/filter/filter.component';
 import { DropdownComponent } from './shared/inputs/dropdown/dropdown.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { WishButtonComponent } from './shared/wish-button/wish-button.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +33,7 @@ import { HeaderComponent } from './shared/header/header.component';
     FilterComponent,
     DropdownComponent,
     HeaderComponent,
+    WishButtonComponent,
   ],
   imports: [
     BrowserModule,

@@ -57,14 +57,10 @@
                     font-weight: 600;
                     color: #4d5e80;
                 }
-            }
-            .add__cart{
-                background-color: #8932ff;
-                color: white;
-                font-weight: 600;
-                font-size: 70%;
-                border-radius: 20px;
-                text-transform: uppercase;
+                &__actions{
+                    @include flex(space-between, flex-start);
+                    gap: 1em;
+                }
             }
 
         }
