@@ -3,7 +3,7 @@
 @import './assets/styles/reset.scss';
 
 * {
-  color: $text-color--1;
+  color: $text-color--2;
   font-family: $body-font ;
   // background-color: #f6f7f8;
 }
@@ -15,6 +15,11 @@ h4,
 h5,
 h6 {
   font-family: $oswald;
+  color: $text-color--1;
+}
+a{
+  text-decoration: none;
+  color: $text-color--2;
 }
 
 .sub--title {

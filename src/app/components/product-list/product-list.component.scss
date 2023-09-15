@@ -4,51 +4,42 @@
     @include flex(space-between, center)
 }
 
-.grid {
+.layout {
     display: flex;
     align-items: stretch;
 
-    aside {
-        flex-grow: 1;
-        max-width: 250px;
-        text-transform: capitalize;
+    .products {
+        flex-grow: 3;
+        display: flex;
+        flex-direction: column;
 
-        ul {
-            padding: 0px;
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
 
-            &::before {
-                content: attr(aria-label);
-                font-size: 120%;
-                font-weight: bold;
-                flex-basis: 100%;
-                color: #4d5e80;
-            }
+        &-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            li {
-                color: #7f90b3;
-            }
-
-            &.colors {
+            &-pages {
                 display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-
-                li {
-                    flex-basis: calc(20% - 10px);
-                    aspect-ratio: 1 / 1;
-                    border-radius: 50%;
-                    background-color: slategray;
-                    cursor: pointer;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #c8d0dc;
+                border-radius: 5px;
+                padding: 0px;
+                .products-pagination__page {
+                    padding: .2em .6em;
+                    text-align: center;
+                    border-right: 1px solid #c8d0dc;
+                    &:nth-last-child(1){
+                        border: none;
+                    }
                 }
             }
         }
     }
-
-    .products-list {
-        flex-grow: 3;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 20px;
-    }
-
 }

@@ -1,41 +1,28 @@
-<h1 class="title">New arrivals</h1>
-<div class="products-sort">
-    <div>sort by</div>
-    <div>view</div>
-</div>
-<div class="grid">
-    <aside>
-            <ul aria-label="brands">
-                <li>volcom</li>
-                <li>adidas</li>
-                <li>vans</li>
+<app-header [title]="'products'" ></app-header>
+<div class="layout">
+    <app-filter></app-filter>
+    <div class="products">
+        <div class="products-sort">
+            <app-dropdown [name]="'sort by'" [list]="['price','rated','newest']"></app-dropdown>
+            <app-dropdown [name]="'view'" [list]="['grid','list']"></app-dropdown>
+        </div>
+        <div class="products-list">
+            <app-product></app-product>
+            <app-product></app-product>
+            <app-product></app-product>
+            <app-product></app-product>
+            <app-product></app-product>
+            <app-product></app-product>
+        </div>
+        <div class="products-pagination">
+            <ul class="products-pagination-pages">
+                <li class="products-pagination__page">1</li>
+                <li class="products-pagination__page">2</li>
+                <li class="products-pagination__page">3</li>
+                <li class="products-pagination__page">4</li>
+                <li class="products-pagination__page">5</li>
+                <li class="products-pagination__page">6</li>
             </ul>
-            <ul aria-label="brands">
-                <li>volcom</li>
-                <li>adidas</li>
-                <li>vans</li>
-            </ul>
-            <ul class="colors" aria-label="colors">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-    </aside>
-    <div class="products-list">
-        <app-product></app-product>
-        <app-product></app-product>
-        <app-product></app-product>
-        <app-product></app-product>
-        <app-product></app-product>
-        <app-product></app-product>
+        </div>
     </div>
 </div>

@@ -48,18 +48,77 @@
                 </button>
             </div>
         </div>
-        <div class="product-info">
-            <h1 class="product-title">product title</h1>
-            <div class="product-price">$41.00</div>
-            <div class="product-description">product description product description product description vproduct
-                description product description</div>
-            <div class="product-option">
-                <div class="product-color">black</div>
-                <div class="product-type">men's</div>
-                <div class="product-size">xs s m l xl 2xl</div>
-                <div class="product-quantity">quantity 1</div>
-                <div class="btn">add to cart</div>
+        <div class="product__info">
+            <div class="product__category">jacket's</div>
+            <h1 class="product__title">product title</h1>
+            <!-- <div class="product__size">xs s m l xl 2xl</div> -->
+            <!-- <div class="product__quantity">quantity 1</div> -->
+            <div class="product__review">
+                <div class="product__review__rating">
+                    <fa-icon [icon]="['fas', 'star']"></fa-icon>
+                    <fa-icon [icon]="['fas', 'star']"></fa-icon>
+                    <fa-icon [icon]="['fas', 'star']"></fa-icon>
+                    <fa-icon [icon]="['fas', 'star']"></fa-icon>
+                    <fa-icon [icon]="['fas', 'star']"></fa-icon>
+                </div>
+                <span>4.3</span>
+                <a class="product__review__see">see Reviews</a>
             </div>
+            <ul class="product__color">
+                <li class="product__color--yellow"> <span></span> </li>
+                <li class="product__color--red"> <span></span> </li>
+                <li class="product__color--green"> <span></span> </li>
+            </ul>
+            <div class="product__price"><span>$</span> 120</div>
+            <div class="btn add__cart">add to cart</div>
+            <div class="product__description">product description product description product description vproduct
+                description product description</div>
         </div>
     </section>
+    <!-- <section class="product-info">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                    role="tab" aria-controls="home" aria-selected="true">Home</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                    role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
+                    role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip exa commodo consequat. Duis aute irure dolor in
+                reprehenderit
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites. Lorem
+                Ipsum best not make any more threats to your website. It will be met with fire and fury like the world
+                has
+                never seen. Does everybody know that pig named Lorem Ipsum? To 'extremely credible source' has called my
+                office and told me that Barack Obama’s placeholder text is a fraud.
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                Lorem ipsum dolor amet mustache skiausgaard +1, blue bottle waistcoat tbh semiotics artisan synth
+                stumptown
+                gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennigui XOXO mlkshk
+                godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn.
+                Blue
+                bottle en.
+            </div>
+        </div>
+    </section> -->
+    <section class="suggestion mt-5">
+        <app-product></app-product>
+        <app-product></app-product>
+        <app-product></app-product>
+        <app-product></app-product>
+    </section>
+
 </div>

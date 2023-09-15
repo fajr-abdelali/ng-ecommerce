@@ -14,6 +14,9 @@ import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.compo
 import { ProductComponent } from './shared/product/product.component';
 import { IconsModule } from './shared/module/icons/icons.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FilterComponent } from './components/product-list/filter/filter.component';
+import { DropdownComponent } from './shared/inputs/dropdown/dropdown.component';
+import { HeaderComponent } from './shared/header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ProductListComponent,
     ProductDetailComponent,
     ShoppingCartComponent,
-    ProductComponent
+    ProductComponent,
+    FilterComponent,
+    DropdownComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
