@@ -62,16 +62,19 @@
                     <fa-icon [icon]="['fas', 'star']"></fa-icon>
                 </div>
                 <span>4.3</span>
-                <a class="product__review__see">see Reviews</a>
+                <a class="product__review__see">
+                    see Reviews
+                    <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+                </a>
             </div>
             <ul class="product__color">
                 <li class="product__color--yellow"> <span></span> </li>
                 <li class="product__color--red"> <span></span> </li>
                 <li class="product__color--green"> <span></span> </li>
             </ul>
-            <div class="product__price"><span>$</span> 120</div>
+            <div class="product__price"><span>$</span>120</div>
             <div class="product__actions">
-                <div class="btn add__cart">add to cart</div>
+                <div class="btn add__cart"><fa-icon [icon]="['fas', 'shopping-cart']"></fa-icon> add to cart</div>
                 <app-wish-button></app-wish-button>
             </div>
             <div class="product__description">product description product description product description vproduct
@@ -118,10 +121,7 @@
         </div>
     </section> -->
     <section class="suggestion mt-5">
-        <app-product></app-product>
-        <app-product></app-product>
-        <app-product></app-product>
-        <app-product></app-product>
+        <app-suggestions></app-suggestions>
     </section>
 
 </div>

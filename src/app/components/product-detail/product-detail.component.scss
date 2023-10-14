@@ -28,36 +28,61 @@
             flex: 50%;
 
             .product {
+                &__category {
+                    color: #8932ff;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    font-size: 75%;
+                }
+
                 &__review {
                     display: flex;
-                    gap: .5em;
+                    align-items: center;
+                    gap: .8em;
+
+                    span,
+                    a {
+                        font-weight: bold;
+                        text-transform: capitalize;
+                        font-size: 80%;
+                    }
+                    &__see {
+                        margin-left: 1em;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 1em;
+                    }
                 }
+
                 &__color {
                     display: flex;
                     gap: .5em;
                     padding: 0;
                     margin: 0;
-    
+
                     li {
-                        padding: .2em;
+                        padding: .3em;
                         border: 1px solid #c3cad9;
-                        border-radius: 5px;
-    
+                        border-radius: 15px;
+
                         span {
                             display: block;
-                            width: 3em;
+                            width: 4em;
                             height: .3em;
-                            border-radius: 5px;
+                            border-radius: 10px;
                             background-color: yellow;
                         }
                     }
                 }
-                &__price{
+
+                &__price {
                     font-size: 150%;
                     font-weight: 600;
                     color: #4d5e80;
                 }
-                &__actions{
+
+                &__actions {
                     @include flex(space-between, flex-start);
                     gap: 1em;
                 }
@@ -65,4 +90,5 @@
 
         }
     }
+
 }
