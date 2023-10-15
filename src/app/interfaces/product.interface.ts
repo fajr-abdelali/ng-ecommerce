@@ -3,11 +3,17 @@ export default interface IProduct {
     title: string;
     price: number;
     description?: string;
-    category: string[];
+    category: string;
     image: string[];
+    options?:options[];
     rating: rating
 }
 interface rating {
     rate?: number;
     count?: number;
+}
+
+interface options{
+    name:string;
+    options:string[]
 }

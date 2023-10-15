@@ -7,7 +7,7 @@ import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.compo
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'product',component:ProductDetailComponent},
+  {path:'product/:id',component:ProductDetailComponent},
   {path:'product-list',component:ProductListComponent},
   {path:'cart',component:ShoppingCartComponent},
 ];

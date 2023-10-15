@@ -14,7 +14,7 @@ export class CartService {
             id: 1,
             title: "Product 1",
             price: 10,
-            category: ["Category A"],
+            category: "Category A",
             image: ["image1.jpg"],
             rating: { rate: 4, count: 20 }
         },
@@ -22,7 +22,7 @@ export class CartService {
             id: 2,
             title: "Product 2",
             price: 15,
-            category: ["Category B"],
+            category: "Category B",
             image: ["image2.jpg"],
             rating: { rate: 3, count: 15 }
         }

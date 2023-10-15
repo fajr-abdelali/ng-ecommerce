@@ -1,4 +1,4 @@
-<a routerLink="/product" *ngIf="product && product.image && product.image.length > 0">
+<a [routerLink]="['/product',product.id]" *ngIf="product && product.image && product.image.length > 0">
     <img *ngIf="product.image && product.image.length > 0" [src]="product.image[0]" class="product-img" alt="...">
     <div class="product-body">
         <h5 class="product-title"> {{ product.title }} <span class="price">${{product.price}}</span></h5>
