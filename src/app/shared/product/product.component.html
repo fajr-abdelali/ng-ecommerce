@@ -1,8 +1,8 @@
-<a routerLink="/product">
-    <img src="https://www.volcom.de/cdn/shop/products/A1732307_BLK_2.jpg?v=1686559734" class="product-img" alt="...">
-<div class="product-body">
-    <h5 class="product-title">Card title <span class="price">$200</span></h5>
-    <div class="product-description">description</div>
-    <app-wish-button></app-wish-button>
-</div>
+<a routerLink="/product" *ngIf="product && product.image && product.image.length > 0">
+    <img *ngIf="product.image && product.image.length > 0" [src]="product.image[0]" class="product-img" alt="...">
+    <div class="product-body">
+        <h5 class="product-title"> {{ product.title }} <span class="price">${{product.price}}</span></h5>
+        <div class="product-description"> {{ product.description }} </div>
+        <app-wish-button></app-wish-button>
+    </div>
 </a>

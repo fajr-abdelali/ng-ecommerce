@@ -1,18 +1,13 @@
-<app-header [title]="'products'" ></app-header>
+<app-header [title]="'products'"></app-header>
 <div class="layout">
     <app-filter></app-filter>
-    <div class="products">
+    <div class="products" *ngIf="products$ | async; else productsEmpty">
         <div class="products-sort">
             <app-dropdown [name]="'sort by'" [list]="['price','rated','newest']"></app-dropdown>
             <app-dropdown [name]="'view'" [list]="['grid','list']"></app-dropdown>
         </div>
         <div class="products-list">
-            <app-product></app-product>
-            <app-product></app-product>
-            <app-product></app-product>
-            <app-product></app-product>
-            <app-product></app-product>
-            <app-product></app-product>
+            <app-product *ngFor="let product of (products$ | async)" [product]="product" ></app-product>
         </div>
         <div class="products-pagination">
             <ul class="products-pagination-pages">
@@ -25,4 +20,6 @@
             </ul>
         </div>
     </div>
+    <ng-template #productsEmpty>no products</ng-template>
+    <div class="isLoading" *ngIf="(isLoading$ | async)"></div>
 </div>
