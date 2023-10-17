@@ -1,0 +1,52 @@
+:host {
+    display: inline-block;
+    max-height: 6rem;
+    width: 100%;
+
+    .card {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        font-size: .8em;
+        line-height: .8em;
+        text-transform: capitalize;
+
+        &-img {
+            max-height: 6rem;
+            flex: 2;
+            overflow: hidden;
+
+            img {
+                height: 6rem;
+                object-fit: cover;
+            }
+        }
+
+        &-body {
+            flex: 3;
+            height: 6rem;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &-option{
+            margin-bottom: 0;
+        }
+
+        &-qty {
+            flex: 2;
+            display: flex;
+            align-items: center;
+
+            input {
+                width: 3rem;
+            }
+        }
+
+        &-price,
+        &-action {
+            flex: 1;
+        }
+    }
+}

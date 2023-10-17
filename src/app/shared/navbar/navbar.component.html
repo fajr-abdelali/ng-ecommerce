@@ -83,7 +83,8 @@
                     </a>
                 </li>
                 <li class="nav-item cart">
-                    <a class="nav-link" routerLink="/cart">
+                    <a class="nav-link" data-bs-toggle="offcanvas" href="#collapseCart" role="button"
+                        aria-expanded="false" aria-controls="collapseCart" data-bs-target="#collapseCart">
                         <fa-icon [icon]="['fas', 'shopping-cart']"></fa-icon>
                     </a>
                 </li>
@@ -91,3 +92,5 @@
         </div>
     </div>
 </nav>
+
+<app-cart></app-cart>
