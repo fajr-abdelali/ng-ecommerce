@@ -32,10 +32,27 @@ const reducer = createReducer<ICartState>(
         };
     }),
     on(fromCart.addToCartSuccess, (state, { cartItem }) => {
-        return {
-            ...state,
-            cart: [...state.cart, cartItem],
-            isLoading: false
+        const existingCartItem = state.cart.find(item => item.product.id === cartItem.product.id);
+        if (existingCartItem) {
+            return {
+                ...state,
+                cart: state.cart.map(item => {
+                    if (item.product.id === cartItem.product.id) {
+                        return {
+                            ...item,
+                            quantity: item.quantity + cartItem.quantity
+                        };
+                    } else {
+                        return item;
+                    }
+                }), isLoading: false
+            };
+        } else {
+            return {
+                ...state,
+                cart: [...state.cart, cartItem],
+                isLoading: false
+            };
         }
     }),
     on(fromCart.updateCartItem, (state) => {
