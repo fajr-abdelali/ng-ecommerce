@@ -64,7 +64,8 @@ const reducer = createReducer<ICartState>(
     on(fromCart.updateCartItemSuccess, (state, { cartItem }) => {
         return {
             ...state,
-            cart: state.cart.map((crtItem) => crtItem.product.id === cartItem.product.id ? cartItem : crtItem)
+            cart: state.cart.map((crtItem) => crtItem.product.id === cartItem.product.id ? cartItem : crtItem),
+            isLoading:false
         }
     }),
     on(fromCart.deleteCartItem, (state) => {

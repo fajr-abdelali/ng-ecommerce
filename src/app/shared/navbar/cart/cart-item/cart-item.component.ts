@@ -10,12 +10,20 @@ import * as fromCart from 'src/app/store/cart/index';
   styleUrls: ['./cart-item.component.scss']
 })
 export class CartItemComponent {
-  @Input() cartItem?:ICartItem;
+  @Input() cartItem?: ICartItem;
 
-  constructor(private store:Store){}
+  constructor(private store: Store) { }
 
-  onDeleteCartItem(cartItem:ICartItem):void{
-    this.store.dispatch(fromCart.deleteCartItem({cartItem}));
+  onDeleteCartItem(cartItem: ICartItem): void {
+    this.store.dispatch(fromCart.deleteCartItem({ cartItem }));
+  }
+
+  onUpdateQty(event: any): void {
+    let newQuantity:number = event.target.value;
+    if(this.cartItem?.product){
+      const newCartItem:ICartItem={...this.cartItem,quantity:newQuantity}
+      this.store.dispatch(fromCart.updateCartItem({ cartItem: newCartItem }));
+    }
   }
 
 }
