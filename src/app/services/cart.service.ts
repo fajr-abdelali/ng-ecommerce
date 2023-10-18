@@ -15,15 +15,17 @@ export class CartService {
             title: "Product 1",
             price: 10,
             category: "Category A",
-            image: ["image1.jpg"],
+            image: ["https://www.volcom.com/cdn/shop/files/A4632300_BSN_100_1188x1584_crop_center.jpg?v=1690489963"],
             rating: { rate: 4, count: 20 }
         },
         {
             id: 2,
-            title: "Product 2",
-            price: 15,
-            category: "Category B",
-            image: ["image2.jpg"],
+            title: "Muzzer Fuzzar Zip Jacket - Squadron Green",
+            price: 100,
+            category: "sweatshirt",
+            image: ["https://www.volcom.com/cdn/shop/products/A4832306_SQD_30_1188x1584_crop_center.jpg?v=1697499737",
+                "https://www.volcom.com/cdn/shop/products/A4832306_SQD_F_1188x1584_crop_center.jpg?v=1697499737",
+                "https://www.volcom.com/cdn/shop/products/A4832306_SQD_B_1188x1584_crop_center.jpg?v=1697499737"],
             rating: { rate: 3, count: 15 }
         }
     ];
@@ -61,7 +63,7 @@ export class CartService {
     }
 
     existInCart = (cartItem: ICartItem): boolean => {
-        return this.cart.every(item => item !== cartItem)
+        return this.cart.every(item => item.product.id !== cartItem.product.id)
     }
 
 }

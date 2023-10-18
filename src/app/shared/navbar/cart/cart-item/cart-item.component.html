@@ -1,20 +1,18 @@
-<div class="card mb-3">
+<div class="card mb-3" *ngIf="cartItem">
     <div class="card-img">
-        <img src="https://www.volcom.com/cdn/shop/products/A4632300_BSN_F_1188x1584_crop_center.jpg?v=1690489963"
-            class="img-fluid rounded-start" alt="...">
+        <img [src]="cartItem.product.image[0]" class="img-fluid rounded-start" alt="...">
     </div>
     <div class="card-body">
-        <p class="card-title">Card title</p>
+        <p class="card-title"> {{cartItem.product.title}} </p>
         <p class="card-option">colors: black</p>
     </div>
     <div class="card-qty">
         <label for="qty">qty</label>
-        <input type="number" name="qty" id="qty">
+        <input type="number" name="qty" id="qty" [value]="cartItem.quantity">
     </div>
-    <div class="card-price">$29</div>
+    <div class="card-price">${{cartItem.product.price}} </div>
     <div class="card-action">
-        <a class="btn-close text-reset" data-bs-toggle="offcanvas" href="#" role="button"
-            aria-expanded="false" aria-controls="" data-bs-target="">
+        <a (click)="onDeleteCartItem(cartItem)" class="btn-close text-reset"  href="javascript:void(0);" role="button">
         </a>
     </div>
 
