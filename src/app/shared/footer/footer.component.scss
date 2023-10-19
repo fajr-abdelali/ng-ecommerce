@@ -1,4 +1,26 @@
-:host{
+:host {
     background-color: #1b2b44;
-    *{color: #ffffff;}
+
+    * {
+        color: #ffffff;
+        text-transform: capitalize;
+    }
+
+    footer {
+        display: flex;
+
+        .col {
+            .logo {
+                font-size: 2rem;
+            }
+            h6{font-weight: 600;}
+            ul{
+                padding: 0px;
+            }
+            .description{
+                font-size: .8em;
+                color: #abb4c6;
+            }
+        }
+    }
 }
