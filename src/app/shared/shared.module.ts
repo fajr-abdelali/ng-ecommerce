@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CartComponent } from './navbar/cart/cart.component'
 import { FooterComponent } from './footer/footer.component';
 import { CartItemComponent } from './navbar/cart/cart-item/cart-item.component';
+import { LogoComponent } from './logo/logo.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { CartItemComponent } from './navbar/cart/cart-item/cart-item.component';
     CartComponent,
     FooterComponent,
     CartItemComponent,
+    LogoComponent,
   ],
   imports: [
     CommonModule,
