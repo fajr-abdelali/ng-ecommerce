@@ -16,13 +16,16 @@ import { DropdownComponent } from './shared/inputs/dropdown/dropdown.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { WishButtonComponent } from './shared/wish-button/wish-button.component';
 import { SuggestionsComponent } from './components/product-detail/suggestions/suggestions.component';
-import { SharedModule } from './shared/shared.module'
+import { SharedModule } from './shared/shared.module';
+import { BrandsComponent } from './pages/home/brands/brands.component'
 
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { ProductStoreModule } from './store/product/product-store.module';
 import { CartStoreModule } from './store/cart/cart-store.module';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     HeaderComponent,
     WishButtonComponent,
     SuggestionsComponent,
-    // CartComponent,
+    BrandsComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     ProductStoreModule,
     CartStoreModule,
     SharedModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
