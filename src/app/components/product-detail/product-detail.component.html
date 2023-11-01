@@ -1,5 +1,5 @@
 <div class="wrapp">
-    <section class="product" *ngIf="product else noProduct">
+    <section class="product" *ngIf="product$ | async as product else noProduct">
         <div class="product-gallery">
             <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
