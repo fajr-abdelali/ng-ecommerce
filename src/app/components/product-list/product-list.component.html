@@ -1,6 +1,6 @@
 <app-header [title]="'products'"></app-header>
 <div class="layout">
-    <app-filter></app-filter>
+    <app-filter [brands]="allBrands" ></app-filter>
     <div class="products" *ngIf="products$ | async; else productsEmpty">
         <div class="products-sort">
             <app-dropdown [name]="'sort by'" [list]="['price','rated','newest']"></app-dropdown>

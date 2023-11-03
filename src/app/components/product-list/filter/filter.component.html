@@ -4,9 +4,7 @@
         brands
     </a>
     <ul class="collapse show" id="filter--brands">
-        <li> <a href="">volcom <span>367</span></a></li>
-        <li><a href="">adidas <span>3</span></a></li>
-        <li> <a href="">vans <span>20</span></a></li>
+        <li *ngFor="let brand of brands"> <a href="">{{brand}} <span>20</span></a></li>
     </ul>
 </div>
 
