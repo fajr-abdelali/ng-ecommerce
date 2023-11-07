@@ -27,6 +27,7 @@ import { CartStoreModule } from './store/cart/cart-store.module';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { CheckListComponent } from './components/product-list/filter/check-list/check-list.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     WishButtonComponent,
     SuggestionsComponent,
     BrandsComponent,
+    CheckListComponent,
   ],
   imports: [
     BrowserModule,

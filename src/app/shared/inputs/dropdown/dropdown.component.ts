@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-dropdown',
@@ -7,7 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class DropdownComponent {
   @Input() name: string = 'name';
-  @Input() list: string[] = ['1', '2', '3', '4']
-  uniqueId:string = Math.random().toString(36).substring(2, 15);
+  @Input() list: string[] = ['1', '2', '3', '4'];
+  @Output() selectedValue = new EventEmitter<string>();
+
+  onOptionSelected(event: any): void {
+    this.selectedValue.emit(event.target.value);
+  }
 
 }
