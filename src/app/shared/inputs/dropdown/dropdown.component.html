@@ -1,3 +1,3 @@
-<select [name]="name" [attr.id]="name" (change)="onOptionSelected($event)">
+<select [name]="name" [attr.id]="name" #dropdown (change)="onOptionSelected(dropdown.value)">
     <option *ngFor="let item of list" [value]="item"> {{item}} </option>
 </select>

@@ -1,4 +1,4 @@
 <div class="checkbox-wrapper-11">
-    <input [id]="brand" type="checkbox" [name]="brand" [value]="brand" (click)="onCheck($event)" >
+    <input [id]="brand" type="checkbox" [name]="brand" [value]="brand" #checkbox (click)="onCheck(checkbox.value)" >
     <label [for]="brand">{{brand}}</label>
 </div>

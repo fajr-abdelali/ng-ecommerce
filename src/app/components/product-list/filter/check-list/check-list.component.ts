@@ -9,11 +9,8 @@ export class CheckListComponent {
   @Input() brand: string = '';
   @Output() selectedBrand = new EventEmitter<string>();
 
-  onCheck(e: any) {
-    // console.log(e.target.checked)
-    // if (e.target.checked) {
-      this.selectedBrand.emit(e.target.value)
-    // }
+  onCheck(value:string) {
+      this.selectedBrand.emit(value)
   }
 
 }

@@ -10,8 +10,8 @@ export class DropdownComponent {
   @Input() list: string[] = ['1', '2', '3', '4'];
   @Output() selectedValue = new EventEmitter<string>();
 
-  onOptionSelected(event: any): void {
-    this.selectedValue.emit(event.target.value);
+  onOptionSelected(value:string): void {
+    this.selectedValue.emit(value);
   }
 
 }

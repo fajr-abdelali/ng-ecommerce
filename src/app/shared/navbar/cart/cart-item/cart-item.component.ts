@@ -18,8 +18,8 @@ export class CartItemComponent {
     this.store.dispatch(fromCart.deleteCartItem({ cartItem }));
   }
 
-  onUpdateQty(event: any): void {
-    let newQuantity:number = event.target.value;
+  onUpdateQty(qty:string): void {
+    let newQuantity:number = parseInt(qty);
     if(this.cartItem?.product){
       const newCartItem:ICartItem={...this.cartItem,quantity:newQuantity}
       this.store.dispatch(fromCart.updateCartItem({ cartItem: newCartItem }));
