@@ -2,10 +2,13 @@
     <a data-bs-toggle="collapse" href="#filter--brands" role="button" aria-expanded="true"
         aria-controls="filter--brands">
         brands
+        <fa-icon [icon]="['fas', 'angle-down']"></fa-icon>
+
     </a>
     <ul class="collapse show" id="filter--brands">
         <!-- <li *ngFor="let brand of brands"> <a href="">{{brand}} <span>20</span></a></li> -->
-        <li *ngFor="let brand of brands"> <app-check-list (selectedBrand)="getBrand($event)" [brand]="brand"></app-check-list> </li>
+        <li *ngFor="let brand of brands"> <app-check-list (selectedBrand)="getBrand($event)"
+                [brand]="brand"></app-check-list> </li>
     </ul>
 </div>
 
@@ -13,21 +16,25 @@
     <a data-bs-toggle="collapse" href="#filter--colors" role="button" aria-expanded="true"
         aria-controls="filter--brand">
         colors
+        <fa-icon [icon]="['fas', 'angle-down']"></fa-icon>
+
     </a>
-    <ul class="collapse show" id="filter--colors">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+    <div class="collapse show" id="filter--colors">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
 </div>
 
 
@@ -35,16 +42,20 @@
 <div class="filter--size">
     <a data-bs-toggle="collapse" href="#filter--size" role="button" aria-expanded="true" aria-controls="filter--brand">
         size
+        <fa-icon [icon]="['fas', 'angle-down']"></fa-icon>
     </a>
-    <ul class="collapse show" id="filter--size">
-        <li>4.5</li>
-        <li>5</li>
-        <li>5.5</li>
-        <li>6</li>
-        <li>6.5</li>
-        <li>7</li>
-        <li>7.5</li>
-        <li>8</li>
-        <li>8.5</li>
-    </ul>
+    <div class="collapse show" id="filter--size">
+        <ul>
+            <li>4.5</li>
+            <li>5</li>
+            <li>5.5</li>
+            <li>6</li>
+            <li>6.5</li>
+            <li>7</li>
+            <li>7.5</li>
+            <li>8</li>
+            <li>8.5</li>
+        </ul>
+    </div>
+
 </div>

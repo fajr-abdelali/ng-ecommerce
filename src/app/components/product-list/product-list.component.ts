@@ -60,17 +60,17 @@ export class ProductListComponent implements OnInit {
     return [...new Set(allOptions)];
   }
 
-  getFilters(filters: ProductFilter) {
+  getFilters(filters: ProductFilter):void {
     this.filterModel = filters;
     this.initSubscriptions();
   }
 
-  onSortChange(sortOption: string) {
+  onSortChange(sortOption: string):void {
     this.selectedSortOption = sortOption;
     this.products$ = this.products$ && this.sortProducts(this.products$, this.selectedSortOption);
   }
 
-  sortProducts(products$: Observable<IProduct[]>, sortOption: string): Observable<IProduct[]> {
+  private sortProducts(products$: Observable<IProduct[]>, sortOption: string): Observable<IProduct[]> {
     return products$.pipe(
       map(products => {
         return products.slice().sort((a, b) => {
