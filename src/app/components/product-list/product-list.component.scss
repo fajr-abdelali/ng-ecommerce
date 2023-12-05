@@ -19,28 +19,6 @@
             gap: 20px;
         }
 
-        &-pagination {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            &-pages {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: 1px solid #c8d0dc;
-                border-radius: 5px;
-                padding: 0px;
-                .products-pagination__page {
-                    padding: .2em .6em;
-                    text-align: center;
-                    border-right: 1px solid #c8d0dc;
-                    &:nth-last-child(1){
-                        border: none;
-                    }
-                }
-            }
-        }
         &-empty{
             text-align: center;
         }

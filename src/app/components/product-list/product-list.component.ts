@@ -19,6 +19,11 @@ export class ProductListComponent implements OnInit {
   filterModel: ProductFilter = { color: [], size: [], brand: [] };
   selectedSortOption: string = '';
 
+  currentPage: number = 1;
+  itemsPerPage: number = 10; // You can adjust this as needed
+  totalItems: number = 0;
+  totalPage: number = 0;
+
   constructor(private readonly store: Store, private cdr: ChangeDetectorRef) { }
 
   // Lifecycle Hook
@@ -41,9 +46,31 @@ export class ProductListComponent implements OnInit {
   }
 
   private aplyFilters(products: IProduct[]): Observable<IProduct[]> {
-    return of(products.filter(product =>
+
+    const filtredProducts = products.filter(product =>
       this.filterModel.brand.length === 0 || this.filterModel.brand.includes(product.brand || '')
-    ));
+    )
+
+    const newProducts = this.aplyPagination(filtredProducts);
+
+    return of(newProducts);
+  }
+
+  private aplyPagination(products: IProduct[]): IProduct[] {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    const endIndex = startIndex + this.itemsPerPage;
+
+    this.totalItems = products.length;
+    this.totalPage = Math.ceil(this.totalItems/this.itemsPerPage);
+
+    return products.slice(startIndex, endIndex);
+  }
+
+  // Method to handle page change
+  onPageChange(pageNumber: any): void {
+    console.log(pageNumber)
+    this.currentPage = parseInt(pageNumber);
+    this.initSubscriptions();
   }
 
   private extractBrandsAndOptions(products: IProduct[]): void {
@@ -60,12 +87,12 @@ export class ProductListComponent implements OnInit {
     return [...new Set(allOptions)];
   }
 
-  getFilters(filters: ProductFilter):void {
+  getFilters(filters: ProductFilter): void {
     this.filterModel = filters;
     this.initSubscriptions();
   }
 
-  onSortChange(sortOption: string):void {
+  onSortChange(sortOption: string): void {
     this.selectedSortOption = sortOption;
     this.products$ = this.products$ && this.sortProducts(this.products$, this.selectedSortOption);
   }

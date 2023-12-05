@@ -9,16 +9,11 @@
         <div class="products-list">
             <app-product *ngFor="let product of (products$ | async)" [product]="product" ></app-product>
         </div>
-        <div class="products-pagination">
-            <ul class="products-pagination-pages">
-                <li class="products-pagination__page">1</li>
-                <li class="products-pagination__page">2</li>
-                <li class="products-pagination__page">3</li>
-                <li class="products-pagination__page">4</li>
-                <li class="products-pagination__page">5</li>
-                <li class="products-pagination__page">6</li>
-            </ul>
-        </div>
+        <app-pagination
+        [currentPage]="currentPage"
+        [totalPage]=" totalPage "
+        (pageSelected)="onPageChange($event)"
+        ></app-pagination>
     </div>
     <ng-template #productsEmpty>no products</ng-template>
     <div class="isLoading" *ngIf="(isLoading$ | async)"></div>

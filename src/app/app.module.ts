@@ -28,6 +28,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CheckListComponent } from './components/product-list/filter/check-list/check-list.component';
+import { PaginationComponent } from './components/product-list/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { CheckListComponent } from './components/product-list/filter/check-list/
     SuggestionsComponent,
     BrandsComponent,
     CheckListComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,
