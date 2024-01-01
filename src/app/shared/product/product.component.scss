@@ -1,49 +1,51 @@
 :host {
-    a {
-        display: inline-block;
-        min-width: 10em;
-        max-width: 16em;
-        text-decoration: none;
-        width: 100%;
 
-        .product-img {
+    // box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    .product {
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+        background-color: #ffffff;
+        height: 100%;
+        position: relative;
+
+        a {
+            text-decoration: none; 
+        }
+
+        &__img {
             width: 100%;
             max-height: 14em;
             object-fit: cover;
-            object-position: top;
+            object-position: center;
         }
 
-        .product {
-            &-body {
-                display: flex;
-                flex-direction: column;
-                position: relative;
-                padding: 1.2em 0em 0em;
-                app-wish-button {
-                    position: absolute;
-                    right: .5em;
-                    top: -1.3em;
-                }
-            }
+        &__body {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
 
-            &-title {
-                display: flex;
-                justify-content: space-between;
-                align-items: baseline;
-                font-size: 1rem;
-                color: #4d5e80;
+        &__title {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 1rem;
+            color: #4d5e80;
+            text-wrap: balance;
 
-                .price {
-                    font-size: .8rem;
-                    color: #7f90b3;
-                }
-            }
-
-            &-description {
+            .price {
+                font-size: .8rem;
                 color: #7f90b3;
-                flex: 1;
-                font-size: 14px;
             }
+        }
+
+        &__description {
+            color: #7f90b3;
+            flex: 1;
+            font-size: 14px;
+        }
+        app-wish-button {
+            position: absolute;
+            inset: 12.8em .5em auto auto;
         }
     }
 }

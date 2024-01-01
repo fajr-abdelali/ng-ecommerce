@@ -1,8 +1,10 @@
-<a [routerLink]="['/product',product.id]" *ngIf="product && product.image && product.image.length > 0">
-    <img *ngIf="product.image && product.image.length > 0" [src]="product.image[0]" class="product-img" alt="...">
-    <div class="product-body">
-        <h5 class="product-title"> {{ product.title }} <span class="price">${{product.price}}</span></h5>
-        <div class="product-description"> {{ product.description }} </div>
-        <app-wish-button></app-wish-button>
-    </div>
-</a>
+<div class="product">
+    <a [routerLink]="['/product',product.id]" *ngIf="product && product.image && product.image.length > 0">
+        <img *ngIf="product.image && product.image.length > 0" [src]="product.image[0]" class="product__img" alt="...">
+        <div class="product__body">
+            <h5 class="product__title"> {{ product.title }} <span class="price">${{product.price}}</span></h5>
+            <div class="product__description"> {{ product.description }} </div>
+        </div>
+    </a>
+    <app-wish-button></app-wish-button>
+</div>

@@ -20,7 +20,7 @@ export class ProductListComponent implements OnInit {
   selectedSortOption: string = '';
 
   currentPage: number = 1;
-  itemsPerPage: number = 10; // You can adjust this as needed
+  itemsPerPage: number = 12; // You can adjust this as needed
   totalItems: number = 0;
   totalPage: number = 0;
 

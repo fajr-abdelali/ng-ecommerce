@@ -2,11 +2,21 @@
 @import './assets/styles/main.scss';
 @import './assets/styles/reset.scss';
 
-* {
-  color: $text-color--2;
-  font-family: $body-font ;
-  // background-color: #f6f7f8;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  width: max(100%,100vw);
+  background-color: $dark-color-lighten;
+
+  * {
+    color: $text-color--2;
+    font-family: $body-font ;
+    // background-color: #f6f7f8;
+  }
 }
+
 
 h1,
 h2,
@@ -17,7 +27,8 @@ h6 {
   font-family: $oswald;
   color: $text-color--1;
 }
-a{
+
+a {
   text-decoration: none;
   color: $text-color--2;
 }

@@ -5,6 +5,7 @@
     font-weight: 100 1000;
     font-stretch: 25% 151%;
 }
+
 @font-face {
     font-family: 'Oswald';
     src: url('../fonts/Oswald/Oswald-VariableFont_wght.ttf') format('truetype') tech('variations');
@@ -12,11 +13,11 @@
     font-stretch: 25% 151%;
 }
 
-$montserrat: 'Montserrat',sans-serif;
-$oswald:'Oswald',sans-serif;
-$body-font:$montserrat;
+$montserrat: 'Montserrat', sans-serif;
+$oswald: 'Oswald', sans-serif;
+$body-font: $montserrat;
 $text-color--1: #4d5e80;
-$text-color--2:#6b7a99;
+$text-color--2: #6b7a99;
 
 
 //colors
@@ -25,3 +26,7 @@ $gradient--1: #489db7;
 $gradient--2: #2d719e;
 
 $list--btn: $gradient--1, $gradient--2;
+
+/*===== VARIABLES CSS =====*/
+
+$dark-color-lighten: #f2f5ff;
