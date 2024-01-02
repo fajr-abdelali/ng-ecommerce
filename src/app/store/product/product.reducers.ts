@@ -17,6 +17,12 @@ const reducer = createReducer<IProductState>(
             ...state, isLoading: false, products
         }
     }),
+    on(fromProduct.addProduct, (state, { product }) => {
+        return {
+            ...state,
+            products: [...state.products, product],
+        };
+    })
 )
 export function productReducer(state = initialProductState, actions: any): IProductState {
     return reducer(state, actions)

@@ -6,3 +6,4 @@ const prefix = '[Products]';
 export const getProducts = createAction(`${prefix} Get Products`);
 export const getProductsSuccess = createAction(`${getProducts.type} Success`, props<{ products: IProduct[]; }>());
 
+export const addProduct = createAction(`${prefix} Add Product`, props<{ product: IProduct }>());

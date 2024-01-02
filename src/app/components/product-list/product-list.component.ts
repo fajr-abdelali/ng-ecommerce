@@ -68,7 +68,6 @@ export class ProductListComponent implements OnInit {
 
   // Method to handle page change
   onPageChange(pageNumber: any): void {
-    console.log(pageNumber)
     this.currentPage = parseInt(pageNumber);
     this.initSubscriptions();
   }

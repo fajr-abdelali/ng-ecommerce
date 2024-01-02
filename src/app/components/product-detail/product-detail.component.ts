@@ -17,18 +17,30 @@ import { Observable } from 'rxjs';
 export class ProductDetailComponent implements OnInit {
 
   product$?: Observable<IProduct | undefined>;
+  productID: string | null = '';
   constructor(private productService: ProductService, private route: ActivatedRoute, private store: Store) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      const productId = params['id'];
-      this.product$ = this.store.select(fromProduct.selectProductById(productId))
-    })
+    this.productID = this.route.snapshot.paramMap.get('id');
+    if (this.productID) {
+      this.product$ = this.store.select(fromProduct.selectProductById(parseInt(this.productID)));
+      
+      this.product$?.subscribe(product=>{
+        if(!product && this.productID !== null){
+          this.getProduct(parseInt(this.productID));
+        }
+      });
+
+    }
+
   }
 
   getProduct(id: number) {
-    return this.store.select(fromProduct.selectProductById(id))
-    // this.productService.getProductById(id).subscribe(product => this.product = product);
+    this.productService.getProductById(id).subscribe(product => {
+      if(product){
+        this.store.dispatch(fromProduct.addProduct({ product }));
+      }
+    });
   }
 
   addCart(): void {
