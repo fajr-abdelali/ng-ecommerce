@@ -14,7 +14,7 @@
                 .carousel-item {
                     img {
                         object-fit: cover;
-                        object-position: top;
+                        object-position: center;
                         width: 100%;
                         max-height: 75vh;
                     }
@@ -46,6 +46,7 @@
                         text-transform: capitalize;
                         font-size: 80%;
                     }
+
                     &__see {
                         margin-left: 1em;
                         display: flex;
@@ -65,13 +66,49 @@
                         padding: .3em;
                         border: 1px solid #c3cad9;
                         border-radius: 15px;
+                        &:hover{
+                            background-color: #4d5e8013;
+                        }
 
                         span {
                             display: block;
                             width: 4em;
                             height: .3em;
                             border-radius: 10px;
-                            background-color: yellow;
+                        }
+                    }
+                }
+
+                &__sizes {
+                    display: flex;
+                    gap: .5em;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        font-size: 13px;
+                        padding: .4em .6em;
+                        border: 1px solid #c3cad9;
+                        border-radius: 10px;
+                        width: max(35px, 1em);
+                        text-align: center;
+                        cursor: pointer;
+                        &.selected{
+                            background-color: #4d5e80;
+                            color: #f2f5ff;
+                            &:hover{
+                                background-color: #4d5e80dc;
+                            }
+                        }
+                        &:hover{
+                            background-color: #4d5e8013;
+                        }
+
+                        span {
+                            display: block;
+                            width: 4em;
+                            height: .3em;
+                            border-radius: 10px;
                         }
                     }
                 }

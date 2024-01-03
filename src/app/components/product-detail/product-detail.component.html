@@ -44,10 +44,15 @@
                     <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
                 </a>
             </div>
-            <ul class="product__color">
-                <li class="product__color--yellow"> <span></span> </li>
-                <li class="product__color--red"> <span></span> </li>
-                <li class="product__color--green"> <span></span> </li>
+            <ul class="product__color" *ngIf="product.colors">
+                <li *ngFor="let color of product.colors" [class]="'product__color--'+color.name"> 
+                    <span [style.background-color]="'#'+color.hexa"></span> 
+                </li>
+            </ul>
+            <ul class="product__sizes" *ngIf="product.size">
+                <li *ngFor="let size of product.size" class=""> 
+                    {{ size }}
+                </li>
             </ul>
             <div class="product__price"><span>$</span> {{ product.price }} </div>
             <div class="product__actions">

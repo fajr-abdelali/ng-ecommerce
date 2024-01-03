@@ -3,8 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import IProduct from 'src/app/interfaces/product.interface';
 import { ProductService } from 'src/app/services/product.service';
 
-import ICartItem from 'src/app/interfaces/cart.interface';
-import { Store, select } from '@ngrx/store';
+import { Store } from '@ngrx/store';
 import * as fromCart from 'src/app/store/cart/index';
 import * as fromProduct from 'src/app/store/product/index';
 import { Observable } from 'rxjs';
